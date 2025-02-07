@@ -28,7 +28,7 @@ function genPass({
 		};
 		if (addSymbols)
 			pw = rndStr(symbols);
-		pw += rndStr(digits) + rndStr('12345678') + rndStr(digits) + rndStr(digits) + (minLength > 10 ? rndStr(digits) : ''); // second digit is not 0 so it won't be confused with a year by chance
+		pw += rndStr(digits) + rndStr('12345678') + rndStr(digits) + rndStr(digits); // second digit is not 0 so it won't be confused with a year by chance
 		while (pw.length < minLength)
 			pw = rndWord() + pw;
 	}
